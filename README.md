@@ -17,13 +17,19 @@ Installation
 git clone https://github.com/xiraynedev/java-music-player.git
 ```
 
-2. Run:
+2. Change directory:
+
+```sh
+cd java-music-player
+```
+
+3. Run:
 
 ```sh
 mvn package
 ```
 
-3. Start the project by running:
+4. Start the project by running:
 
 ```sh
 java -cp target/java-music-player-1.0-SNAPSHOT.jar com.xiraynedev.app.App
