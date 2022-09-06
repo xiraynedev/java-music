@@ -3,7 +3,9 @@
 
 # java-music-player
 
-The Java Music player is equipped with options to play, stop, reset, change, and quit songs.
+The Java Music player is equipped with options to (p)lay, (s)top, (r)eset, (c)hange, and (q)uit songs. Pick one of the preceding letters and press enter.
+
+(Be sure to have `openjdk 11.0.16` and `Apache Maven 3.6.3` installed on your system before trying the installation instructions below.)
 
 ![project screenshot](images/project-screenshot.png)
 
