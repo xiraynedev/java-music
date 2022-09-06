@@ -26,3 +26,9 @@ mvn package
 ```sh
 java -cp target/java-music-player-1.0-SNAPSHOT.jar com.xiraynedev.app.App
 ```
+
+If this error occurs in Linux,
+
+`java.lang.IllegalArgumentException: No line matching interface Clip supporting format PCM_SIGNED 22000.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian, and buffers of 4610 to 4610 bytes is supported`,
+
+be sure to install PulseAudio with `sudo apt install pulseaudio`
