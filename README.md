@@ -3,7 +3,7 @@
 
 # java-music-player
 
-The Java Music player is equipped with options to (p)lay, (s)top, (r)eset, (c)hange, and (q)uit songs. Pick one of the preceding letters and press enter.
+The Java Music player is equipped with options to (p)lay, (s)top, (r)eset, (c)hange, and (q)uit songs. Pick one of the preceding letters and press enter. There are a total of five songs. Each song is random when changing between them.
 
 (Be sure to have `openjdk 11.0.16` and `Apache Maven 3.6.3` installed on your system before trying the installation instructions below.)
 
