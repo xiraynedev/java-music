@@ -9,7 +9,7 @@ The Java Music player is equipped with options to (p)lay, (s)top, (r)eset, (c)ha
 
 ![project screenshot](images/project-screenshot.png)
 
-##Installation Instructions
+## Installation Instructions
 
 1. Clone the repo:
 
