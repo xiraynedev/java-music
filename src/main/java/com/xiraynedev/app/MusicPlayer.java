@@ -34,7 +34,7 @@ public class MusicPlayer {
                 System.out.println(
                                 "Welcome to the music player in Java! Below are the options for controlling music playback.");
 
-                while (!(response == 'q')) {
+                while (response != 'q') {
                         System.out.println("Enter p for play; s for stop; r for reset; c to change songs; q for quit;");
 
                         response = scanner.next().toLowerCase().charAt(0);
