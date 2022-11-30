@@ -7,7 +7,7 @@ The Java Music player is equipped with options to (p)lay, (s)top, (r)eset, (c)ha
 
 (Be sure to have `openjdk 11.0.16` and `Apache Maven 3.6.3` installed on your system before trying the installation instructions below.)
 
-![project screenshot](images/project-screenshot.png)
+![application screenshot](images/application-screenshot.png)
 
 ## Installation Instructions
 
@@ -29,7 +29,7 @@ cd java-music-player
 mvn package
 ```
 
-4. Start the project by running:
+4. Start the application by running:
 
 ```sh
 java -cp target/java-music-player-1.0-SNAPSHOT.jar com.xiraynedev.app.App
