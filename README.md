@@ -1,7 +1,7 @@
 ![openjdk](https://img.shields.io/badge/openjdk-11.0.16-informational)
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-3.6.3-red)
 
-# java-music-player
+# java-music
 
 The Java Music player is equipped with options to (p)lay, (s)top, (r)eset, (c)hange, and (q)uit songs. Pick one of the preceding letters and press enter. There are a total of five songs. Each song is random when changing between them.
 
@@ -14,13 +14,13 @@ The Java Music player is equipped with options to (p)lay, (s)top, (r)eset, (c)ha
 1. Clone the repo:
 
 ```sh
-git clone https://github.com/xiraynedev/java-music-player.git
+git clone https://github.com/xiraynedev/java-music.git
 ```
 
 2. Change directory:
 
 ```sh
-cd java-music-player
+cd java-music
 ```
 
 3. Run:
@@ -32,7 +32,7 @@ mvn package
 4. Start the application by running:
 
 ```sh
-java -cp target/java-music-player-1.0-SNAPSHOT.jar com.xiraynedev.app.App
+java -cp target/java-music-1.0-SNAPSHOT.jar com.xiraynedev.app.App
 ```
 
 If this error occurs in Linux,

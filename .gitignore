@@ -19,3 +19,6 @@ build/
 java/build/**
 
 .project
+
+# vscode
+.vscode
