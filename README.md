@@ -39,4 +39,4 @@ If this error occurs in Linux,
 
 `java.lang.IllegalArgumentException: No line matching interface Clip supporting format PCM_SIGNED 22000.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian, and buffers of 4610 to 4610 bytes is supported`,
 
-be sure to install PulseAudio with `sudo apt install pulseaudio`
+or there is no sound, be sure to install PulseAudio with `sudo apt install pulseaudio`
