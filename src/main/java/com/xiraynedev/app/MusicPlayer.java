@@ -14,11 +14,18 @@ public class MusicPlayer {
         private Clip clip;
 
         public void startPlayer() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-                file = new File("sample_music/1.wav");
-                stream = AudioSystem.getAudioInputStream(file);
-                clip = AudioSystem.getClip();
-                clip.open(stream);
-                startPlayerInterface();
+                try {
+                        file = new File("sample_music/1.wav");
+                        stream = AudioSystem.getAudioInputStream(file);
+                        clip = AudioSystem.getClip();
+                        clip.open(stream);
+                        startPlayerInterface();
+
+                } catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Music cannot play just yet!");
+                        System.out.println(stream.getFormat());
+                }
         }
 
         private void changeSong() {
@@ -40,50 +47,50 @@ public class MusicPlayer {
                         response = scanner.next().toLowerCase().charAt(0);
 
                         switch (response) {
-                        case 'p':
-                                if (clip.getMicrosecondLength() > 0 && !clip.isRunning()) {
+                                case 'p':
+                                        if (clip.getMicrosecondLength() > 0 && !clip.isRunning()) {
+                                                clip.setMicrosecondPosition(0);
+                                        }
+                                        if (!clip.isRunning()) {
+                                                System.out.println("Now playing..." + filename);
+                                                clip.start();
+                                        }
+                                        break;
+                                case 's':
+                                        if (clip.isRunning()) {
+                                                System.out.println("Now stopping..." + filename);
+                                                clip.stop();
+                                        }
+                                        break;
+                                case 'r':
+                                        if (clip.isRunning())
+                                                clip.stop();
+                                        System.out.println("Now resetting..." + filename);
                                         clip.setMicrosecondPosition(0);
-                                }
-                                if (!clip.isRunning()) {
-                                        System.out.println("Now playing..." + filename);
                                         clip.start();
-                                }
-                                break;
-                        case 's':
-                                if (clip.isRunning()) {
-                                        System.out.println("Now stopping..." + filename);
-                                        clip.stop();
-                                }
-                                break;
-                        case 'r':
-                                if (clip.isRunning())
-                                        clip.stop();
-                                System.out.println("Now resetting..." + filename);
-                                clip.setMicrosecondPosition(0);
-                                clip.start();
-                                break;
-                        case 'c':
-                                if (clip.isRunning())
-                                        clip.stop();
-                                changeSong();
-                                filename = file.getName();
-                                stream = AudioSystem.getAudioInputStream(file);
-                                clip.close();
-                                clip.open(stream);
-                                clip.start();
-                                System.out.println("Now playing..." + filename);
-                                break;
-                        case 'q':
-                                if (clip.isRunning())
-                                        clip.stop();
-                                clip.close();
-                                System.out.println("Now exiting player...");
-                                scanner.close();
-                                clip.close();
-                                break;
-                        default:
-                                System.out.println("Please enter a valid response.");
-                                break;
+                                        break;
+                                case 'c':
+                                        if (clip.isRunning())
+                                                clip.stop();
+                                        changeSong();
+                                        filename = file.getName();
+                                        stream = AudioSystem.getAudioInputStream(file);
+                                        clip.close();
+                                        clip.open(stream);
+                                        clip.start();
+                                        System.out.println("Now playing..." + filename);
+                                        break;
+                                case 'q':
+                                        if (clip.isRunning())
+                                                clip.stop();
+                                        clip.close();
+                                        System.out.println("Now exiting player...");
+                                        scanner.close();
+                                        clip.close();
+                                        break;
+                                default:
+                                        System.out.println("Please enter a valid response.");
+                                        break;
                         }
                 }
         }
